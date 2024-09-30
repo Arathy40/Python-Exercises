@@ -1,0 +1,89 @@
+import random
+
+choice1=input("What do you Choose? Type 0 for Rock, 1 for Paper and 2 for Scissors")
+choice=int(choice1)
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+if choice==0:
+    print(rock)
+elif choice==1:
+    print(paper)
+elif choice==2:
+    print(scissors)
+else:
+    print("Invalid Choice")
+player=random.randint(0,2)
+if player==0:
+    print(rock)
+elif player==1:
+    print(paper)
+elif player==2:
+    print(scissors)
+else:
+    print("Invalid Choice")
+
+if choice==0 and player==0:
+    print(" Draw ")
+    # tos1=input("Let's do a Toss. 1 for Head and 2 for Tail")
+    # tos = int(tos1)
+    # toss=random.randint(1,2)
+    # if tos==toss:
+    #     print(f"{toss} You won")
+    # else:
+    #     print(f"{toss} You lose")
+elif choice==1 and player==1:
+    print("Draw")
+    # tos1 = input("Let's do a Toss. 1 for Head and 2 for Tail")
+    # tos=int(tos1)
+    # toss = random.randint(1, 2)
+    # if tos == toss:
+    #     print(f"Toss Result{toss} You won")
+    # else:
+    #     print(f"{toss} You lose")
+elif choice==2 and player==2:
+    print(" Draw ")
+    # tos1 = input("Let's do a Toss. 1 for Head and 2 for Tail")
+    # tos = int(tos1)
+    # toss = random.randint(1, 2)
+    # if tos == toss:
+    #     print(f"{toss} You won")
+    # else:
+    #     print(f"{toss} You lose")
+elif choice==0 and player==1:
+    print("You Lose")
+elif choice==0 and player==2:
+    print("You Won")
+elif choice==1 and player==0:
+    print("You Won")
+elif choice==1 and player==2:
+    print("You Lose")
+elif choice==2 and player==1:
+    print("You Won")
+elif choice==2 and player==0:
+    print("You Lose")
+else:
+    print("Sorry")
